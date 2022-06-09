@@ -16,7 +16,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@project-angular/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@project-angular/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@project-angular/core-data": ["libs/core-data/src/index.ts"],
+      "@project-angular/core-state": ["libs/core-state/src/index.ts"],
+      "@project-angular/material": ["libs/material/src/index.ts"],
+      "@project-angular/ui-login": ["libs/ui-login/src/index.ts"],
+      "@project-angular/environment": ["libs/environment/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

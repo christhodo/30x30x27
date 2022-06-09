@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@project-angular/api-interfaces';
+import { AuthGuardService } from '@project-angular/core-data';
 
 @Component({
   selector: 'project-angular-root',
@@ -8,6 +7,10 @@ import { Message } from '@project-angular/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  title = '';
+
+  links = [{ path: '/projects', icon: 'view_list', title: 'Directory' }];
+
+  userIsAuthenticated = this.authService.isAuthenticated;
+  constructor(private authService: AuthGuardService) {}
 }
