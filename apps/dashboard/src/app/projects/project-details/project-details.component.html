@@ -29,7 +29,9 @@
           required
         />
       </mat-form-field>
-      <mat-checkbox name="complete">Order Complete</mat-checkbox>
+      <mat-checkbox [(ngModel)]="currentProject.complete" name="complete"
+        >Order Complete</mat-checkbox
+      >
     </mat-card-content>
     <mat-card-actions>
       <button

@@ -9,6 +9,7 @@ import { Project } from '@project-angular/api-interfaces';
 export class ProjectDetailsComponent {
   currentProject: Project;
   originalTitle = '';
+  @Input() projects: Project[];
   @Input() set project(value: Project) {
     if (value) this.originalTitle = value.name;
     this.currentProject = { ...value };

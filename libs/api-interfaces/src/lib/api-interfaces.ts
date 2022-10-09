@@ -14,7 +14,7 @@ export interface BaseEntity {
 export interface Project extends BaseEntity {
   name: string;
   order: string;
-  complete?: boolean;
+  complete: boolean;
 }
 
 export interface Order extends BaseEntity {

@@ -14,7 +14,7 @@
       class="logout"
       mat-mini-fab
       (click)="logout()"
-      *ngIf="isAuthenticated.value; else elseBlock"
+      *ngIf="isAuthenticated.value"
     >
       <mat-icon>exit_to_app</mat-icon>
     </button>

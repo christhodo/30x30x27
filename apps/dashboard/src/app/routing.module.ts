@@ -13,7 +13,6 @@ const routes: Routes = [
     component: ProjectsComponent,
     canActivate: [AuthGuard],
   },
-  { path: 'wild', component: WildComponent },
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
