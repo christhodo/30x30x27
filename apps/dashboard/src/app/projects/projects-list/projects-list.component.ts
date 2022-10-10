@@ -9,7 +9,7 @@ import { ProjectsService } from '@project-angular/core-data';
 })
 export class ProjectsListComponent {
   @Input() projects: Project[];
-  @Input() readonly = false;
+
   @Output() selected = new EventEmitter();
   @Output() deleted = new EventEmitter();
 }

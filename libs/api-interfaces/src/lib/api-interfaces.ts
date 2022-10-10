@@ -13,6 +13,12 @@ export interface BaseEntity {
 
 export interface Project extends BaseEntity {
   name: string;
-  phone: string;
-  defaultImageUrl?: string;
+  order: string;
+  complete?: boolean;
+}
+
+export interface Order extends BaseEntity {
+  title: string;
+  description: string;
+  complete: boolean;
 }

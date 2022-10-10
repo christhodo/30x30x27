@@ -10,7 +10,7 @@ import { User } from '@project-angular/api-interfaces';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  userInfo = { email: 'users@n.com', password: 'pass' };
+  userInfo = { email: 'barista@s.com', password: 'coffee' };
   form: FormGroup;
 
   constructor(

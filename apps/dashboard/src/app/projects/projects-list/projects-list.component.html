@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-title>
-    Directory
+    Orders In Progress
   </mat-card-title>
   <mat-card-content>
     <mat-list>
@@ -11,7 +11,6 @@
       >
         <span matLine>{{ project.name }}</span>
         <button
-          *ngIf="!readonly"
           attr.data-cy="delete-project-{{ project.id }}-btn"
           mat-icon-button
           type="button"

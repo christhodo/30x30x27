@@ -8,20 +8,12 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ProjectsService {
-  model = 'users';
-  private imageUrl = `https://robohash.org/`;
+  model = 'orders';
 
   constructor(private http: HttpClient) {}
 
   all() {
-    return this.http.get<Project[]>(this.getUrl()).pipe(
-      map((projects) =>
-        projects.map((project) => ({
-          ...project,
-          defaultImageUrl: `${this.imageUrl}${project.name}`,
-        }))
-      )
-    );
+    return this.http.get<Project[]>(this.getUrl());
   }
 
   find(id: string) {
@@ -42,10 +34,6 @@ export class ProjectsService {
 
   private getUrl() {
     return `${environment.apiEndpoint}/${this.model}`;
-  }
-
-  private getImage() {
-    return `${this.imageUrl}${this.model}`;
   }
 
   private getUrlWithId(id) {
