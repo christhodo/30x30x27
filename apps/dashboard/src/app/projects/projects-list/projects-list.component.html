@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-title>
-    Directory
+    Orders In Progress
   </mat-card-title>
   <mat-card-content>
     <mat-list>
@@ -10,15 +10,16 @@
         (click)="selected.emit(project)"
       >
         <span matLine>{{ project.name }}</span>
+        <p matLine>{{ project.order }}</p>
         <button
-          *ngIf="!readonly"
+          *ngIf="project.complete"
           attr.data-cy="delete-project-{{ project.id }}-btn"
           mat-icon-button
           type="button"
           color="warn"
           (click)="deleted.emit(project); $event.stopImmediatePropagation()"
         >
-          <mat-icon>clear</mat-icon>
+          <mat-icon>done</mat-icon>
         </button>
       </mat-list-item>
     </mat-list>

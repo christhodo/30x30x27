@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'https://jsonplaceholder.typicode.com',
+  apiEndpoint: 'http://localhost:3333/api',
 };
 
 /*

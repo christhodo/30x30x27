@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { LoginComponent } from 'libs/ui-login/src/lib/login/login/login.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AuthGuard } from '@project-angular/core-data';
@@ -11,10 +10,9 @@ const routes: Routes = [
   { path: 'profiles', component: ProfilesComponent },
   {
     path: 'projects',
+    component: ProjectsComponent,
     canActivate: [AuthGuard],
-    children: [{ path: '', component: ProjectsComponent }],
   },
-  { path: 'wild', component: WildComponent },
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },

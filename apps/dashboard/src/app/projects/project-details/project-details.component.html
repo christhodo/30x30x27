@@ -1,10 +1,10 @@
 <mat-card>
   <mat-card-title>
     <span *ngIf="currentProject.id; else elseBlock">
-      Editing {{ originalTitle }}
+      Editing Order For {{ originalTitle }}
     </span>
     <ng-template #elseBlock>
-      Select User
+      Select Order
     </ng-template>
   </mat-card-title>
   <form #form="ngForm" (submit)="saved.emit(currentProject)">
@@ -22,20 +22,16 @@
       <mat-form-field class="full-width">
         <input
           matInput
-          placeholder="Phone"
-          [(ngModel)]="currentProject.phone"
+          placeholder="Order"
+          [(ngModel)]="currentProject.order"
           type="text"
           name="phone"
           required
         />
       </mat-form-field>
-      <img
-        mat-card-sm-image
-        [src]="currentProject.defaultImageUrl"
-        height="50"
-        width="50"
-        class="avatar"
-      />
+      <mat-checkbox [(ngModel)]="currentProject.complete" name="complete"
+        >Order Complete</mat-checkbox
+      >
     </mat-card-content>
     <mat-card-actions>
       <button

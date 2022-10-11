@@ -13,7 +13,7 @@ export interface ProjectsState extends EntityState<Project> {
 }
 
 export interface ProjectsPartialState {
-  readonly [PROJECTS_FEATURE_KEY]: ProjectsState;
+  [PROJECTS_FEATURE_KEY]: ProjectsState;
 }
 
 export const projectsAdapter: EntityAdapter<Project> = createEntityAdapter();
